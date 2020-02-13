@@ -20,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             mPlayer.start()
         }
     }
+
+    override fun onStop() {
+        super.onStop()
+        mPlayer?.stop()
+        mPlayer?.release()
+    }
 }
 
 
